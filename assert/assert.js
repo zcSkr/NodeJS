@@ -27,7 +27,7 @@ const assert = require('assert');
 // );
 
 //5.
-//测试参数1 == 参数2 正确不报错,错误则抛出AssertionError信息,如果有参数3message则显示message,
+//测试参数1 == 参数2 是否相等 正确不报错,错误则抛出AssertionError信息,如果有参数3message则显示message,
 //如果没有参数3 则显示 "参数1==参数2"
 // assert.equal(1, 2,'aaa');
 
@@ -38,10 +38,10 @@ const assert = require('assert');
 //参数4 operator 默认 "!="
 // assert.fail(1, 2, undefined, '>');
 // assert.fail(1, 2, '错误信息', '>');
-assert.fail('错误信息');
+// assert.fail('错误信息');
 
 //8.
-//参数1 value 如果为真则抛出value 用于测试回调函数的 error 参数。
+//参数1 value 如果为真 则抛出value 用于测试回调函数的 error 参数。
 // assert.ifError(1);
 // assert.ifError('dasdas');
 
@@ -71,12 +71,12 @@ assert.fail('错误信息');
 
 
 // 14.
-// 测试参数1 === 参数2 测试是否全等 错误不报错,正确抛出AssertionError信息,如果有参数3message则显示message,
+// 测试参数1 === 参数2 测试是否全等 正确不报错,错误则抛出AssertionError信息,如果有参数3message则显示message,
 //如果没有参数3 则显示 "参数1===参数2"
-// assert.strictEqual(1, 2);
+// assert.strictEqual(1, 2,'错误');
 
 // 15.
-//参数1 回调函数,立即执行 期望抛出错误,如果不抛出错误参数3message 会作为 AssertionError 的错误信息。
+//参数1 回调函数,立即执行 期望抛出错误,如果不抛出错误 参数3message 会作为 AssertionError 的错误信息。
 //参数2 error 错误参数 error 可以是构造函数、正则表达式、或自定义的验证函数。
 // assert.throws(
 //     function () {
