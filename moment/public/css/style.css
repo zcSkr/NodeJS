@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding:0;
+}
+html,body{
+    background: url("https://qnstatic.pianke.me/public/assets/img/bgImg.png");
+    background-repeat: repeat-x;
+    background-color: rgb(251,251,251);
+}
+nav{
+    width: 100%;
+    background: white;
+    height: 90px;
+    box-shadow: 0 0 8px gainsboro;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.95;
+    z-index: 1;
+}
+#head{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+}
+#logo{
+    line-height: 123px;
+    float: left;
+    height: 90px;
+}
+#navUL{
+    float: left;
+    width: 420px;
+    margin: 0 100px;
+}
+#navUL>li{
+    text-align: center;
+    line-height: 87px;
+    list-style: none;
+    float: left;
+    height: 87px;
+    width: 84px;
+    cursor: pointer;
+}
+#navUL>li:hover{
+    background: rgb(251,251,251);
+}
+.clickLi{
+    font-weight: bolder;
+    border-bottom: 3px solid black;
+    background: rgb(251,251,251);
+}
+#login{
+    float: right;
+    width: 200px;
+    height: 65px;
+    padding-top: 25px;
+}
+#inside{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgb(92,183,110);
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+#inside:hover{
+    box-shadow: 0 0 10px white inset;
+}
+#inside>img{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 10px;
+    top: 10px;
+}
+#outside{
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    border: 1px solid rgb(92,183,110);
+}
+#loginBtn{
+    float: right;
+    width: 120px;
+    height: 45px;
+    border: 1px solid rgb(92,183,110);
+    border-radius: 50px;
+    text-align: center;
+    line-height: 45px;
+    color: rgb(92,183,110);
+}
+#loginBtn:hover{
+    background: rgb(87,173,104);
+    color: white;
+}
+/*以上是导航栏样式*/
+#container{
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 90px;
+}
+#focus{
+    width: 960px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#bigImg{
+    width: 480px;
+    height: 480px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.smallImg{
+    width: 240px;
+    height: 240px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+#focus img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.focus_picture>img:hover{
+    transform: scale(1.1);
+}
+.maskTitle{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background: rgba(0,0,0,0.4);
+    bottom: 0;
+    left: 0;
+    color: white;
+    transition: all 0.5s;
+    display: none;
+}
+.maskTitle>p{
+    font-size: 18px;
+    margin: 5px 15px;
+    white-space: nowrap;
+    font-weight: 300;
+}
+/*以上是缩放图的样式*/
+.title_cpt{
+    width: 100%;
+    background: url("../img/square.png") no-repeat;
+    background-position: 0 74px;
+    padding: 70px 0 40px 28px;
+}
+.article-cpt{
+    width: 960px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.line{
+    height: 1px;
+    border-bottom: 1px solid black;
+    width: 30px;
+    margin: 10px 0;
+}
+.article-info{
+    border: 1px solid #e8e8e8;
+    padding: 20px 0;
+    padding-left: 20px;
+    width: 638px;
+    float: left;
+    font-size: 12px;
+    color: #333;
+}
+.article-info a{
+    text-decoration: none;
+}
+.article-info a:hover{
+    color: rgb(87,173,104);
+}
+.article-title>a,.article-author>a{
+    color: #333;
+}
+.article-title{
+    font-size: 25px;
+}
+.viewAll{
+    margin-left: 20px;
+    color: rgb(133,189,168);
+}
+.viewAll>img{
+    width: 6px;
+    height: 10px;
+}
+.article-content{
+    height: 100px;
+    font-size: 13px;
+    font-weight: 100;
+    color: #333;
+}
+.article-others{
+    color: #999;
+    font-weight: 100;
+}
+.article-img{
+    width: 300px;
+    cursor: pointer;
+    float: right;
+    height: 222px;
+}
+.article-img>img{
+    width: 100%;
+    height: 100%;
+}
+/*以上是阅读样式*/
+#ting{
+    width: 100%;
+    overflow: hidden;
+}
+.tingDiv{
+    width: 300px;
+    height: 420px;
+    float: left;
+}
+.tingDiv:nth-child(1),.tingDiv:nth-child(2){
+    margin-right: 30px;
+}
+.ting-img{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.ting-img>img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.ting-img-mask{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    background: url("../img/play-icon.png") no-repeat;
+    background-color: black;
+    background-position: 109px 109px;
+    opacity: 0;
+    transition: all 1.5s;
+    /*display: none;*/
+}
+.ting-info{
+    width: 258px;
+    height: 80px;
+    border: 1px solid #e8e8e8;
+    padding: 25px 20px 13px 20px;
+}
+.ting-info a{
+    text-decoration: none;
+    color: #000;
+}
+.ting-info a:hover{
+    color: rgb(87,173,104);
+}
+.ting-title{
+    padding-bottom: 10px;
+    font-size: 24px;
+    height: 24px;
+    width: 260px;
+    line-height: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ting-anchor{
+    padding-bottom: 13px;
+}
+.ting-anchor a{
+    color: #333;
+    font-size: 12px;
+}
+.ting-others{
+    font-size: 12px;
+    color: #333;
+    font-weight: 100;
+}
+/*以上是ting的样式*/
+#hotPianker{
+    width: 100%;
+    overflow: hidden;
+}
+.user-cpt{
+    float: left;
+    margin-left: 13px;
+    width: 230px;
+    height: 235px;
+    background-image: url("../img/user-bg.png");
+    background-size: cover;
+}
+.user-cpt:nth-child(1){
+    margin-left: 0px;
+}
+.user-info{
+    width: 180px;
+    height: 144px;
+    padding-top: 43px;
+    padding-left: 20px;
+}
+.user-cpt-left{
+    float: left;
+    width: 80px;
+    height: 109px;
+    text-align: center;
+}
+.user-cpt-right{
+    float: right;
+    width: 80px;
+    height: 88px;
+    padding-top: 20px;
+}
+.headImg{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+.user-img{
+    width: 52px;
+    height: 19px;
+}
+.line2{
+    width: 15px;
+    height: 1px;
+    border-bottom: 1px solid black;
+    margin-top: 20px;
+}
+.user-des{
+    font-size: 13px;
+    color: #333;
+    font-weight: 100;
+    margin-top: 5px;
+}
+.user-name>a{
+    text-decoration: none;
+    color: #333;
+}
+.user-name>a:hover{
+    color: rgb(87,173,104);
+}
+/*以上是人气片刻的样式*/
+#more-botton{
+    width: 190px;
+    margin: 0 auto;
+    padding-top: 84px;
+    padding-bottom: 94px;
+}
+#btn-box{
+    width: 190px;
+    height: 55px;
+    border-radius: 55px;
+    border: 1px solid rgb(120,188,133);
+    position: relative;
+}
+#btn-more{
+    position: absolute;
+    width: 180px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    background: rgb(120,188,133);
+    color: white;
+    border-radius: 45px;
+    left: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+#btn-more:hover{
+    background: rgb(87,173,104);
+}
+/*以上是查看更多按钮*/
+footer{
+    background: rgb(26,24,24);
+}
+#foot{
+    width: 1200px;
+    height: 118px;
+    margin: 0 auto;
+}
+#foot-logo{
+    width: 100px;
+    height: 118px;
+    background: url("../img/foot-logo.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#foot-link{
+    line-height: 25px;
+    padding-left: 120px;
+    margin-top: -80px;
+}
+#foot-link>span>a{
+    text-decoration: none;
+    color: #666;
+    padding-right: 10px;
+    font-size: 13px;
+}
+#foot-link>span{
+    display: block;
+    font-size: 13px;
+    color: #666;
+}
+#foot-icon{
+    margin-top: -44px;
+    float: right;
+}
+.app-icon{
+    width: 44px;
+    height: 44px;
+    margin-right: 20px;
+}
+#safe-icon{
+    width: 86px;
+    height: 35px;
+    margin-left: 20px;
+}
+#wechat{
+    position: relative;
+}
+#ewCode{
+    position: absolute;
+    top: -240px;
+    left: -80px;
+    display: none;
+}
+/*以上是底部样式*/
+/*回到顶部标签*/
+#backTop{
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    position: fixed;
+    bottom: 170px;
+    right: 50px;
+    background: url("../img/back-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    border-radius: 50%;
+    display: none;
+}
+#backTop:hover{
+    background: url("../img/back-topH.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+}
