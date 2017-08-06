@@ -3,12 +3,11 @@ var handleError = require('./handleError');
 var mysql = require('mysql');
 var router = express.Router();
 
-
 router.post('/',function(req,res){
-
     var user = {
-        username : req.body.username,
-        password : String(req.body.password),
+        password : req.body.password,
+        newPassword : req.body.newPassword,
+        againPassword : req.body.againPassword
     };
 
     var options = {
@@ -28,23 +27,18 @@ router.post('/',function(req,res){
     connect.query(useDBSQL,function(error){
         handleError('使用数据库',error);
     });
-//查询数据,回调函数第二个参数是个数组
-    var selectSQL = 'SELECT * FROM user';
-    connect.query(selectSQL,function(error,results){
-        var isSuccess = handleError('查询',error);
-        if(!isSuccess) return;
-        if (results.length == 0){
-            res.send('登录失败');
-        }else{
-            if (user['username'] == results[0]['username']){
-                if(user['password'] == results[0]['password']){
-                    res.send('登录成功');
-                }
-            }else{
-                res.send('登录失败');
-            }
-        }
-    });
+//修改数据
+    if(user['newPassword'] == user['againPassword']){
+        var updateSQL = 'UPDATE user SET password=' + user['newPassword'] + ' WHERE password=' + user['password'];
+        connect.query(updateSQL,function(error){
+            var isSuccess = handleError('查询',error);
+            if(!isSuccess) return;
+            res.send('修改成功');
+        });
+    }else{
+        res.send('修改失败');
+    }
+
 //关闭连接
     connect.end(function(error){
         handleError('关闭',error);
